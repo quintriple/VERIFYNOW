@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discord Verification</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Choose an Option</h1>
-    <button onclick="verifyDiscord()">Verify Discord Account</button>
-    <button onclick="promptPassword()">Admin Access</button>
+    <div class="container">
+        <header>
+            <h1>Choose an Option</h1>
+        </header>
+        <button onclick="verifyDiscord()">Verify Discord Account</button>
+        <button onclick="promptPassword()">Admin Access</button>
 
-    <div id="adminSection" style="display:none;">
-        <h2>Admin Panel</h2>
-        <button onclick="generateQRCode()">Generate QR Code</button>
-        <div id="qrcode"></div>
-    </div>
+        <div id="adminSection" class="hidden">
+            <h2>Admin Panel</h2>
+            <button onclick="generateQRCode()">Generate QR Code</button>
+            <div id="qrcode"></div>
+        </div>
 
-    <div id="verifySection" style="display:none;">
-        <h2>Discord Verification</h2>
-        <button onclick="verifyDiscord()">Verify</button>
+        <div id="verifySection" class="hidden">
+            <h2>Discord Verification</h2>
+            <button onclick="alert('Discord Account Verified!')">Verify</button>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
@@ -26,7 +31,7 @@
         function promptPassword() {
             let password = prompt("Enter the Admin Password:");
             if (password === "CumSock") {
-                document.getElementById('adminSection').style.display = 'block';
+                document.getElementById('adminSection').classList.remove('hidden');
             } else {
                 alert("Incorrect Password!");
             }
@@ -43,7 +48,7 @@
         }
 
         function verifyDiscord() {
-            document.getElementById('verifySection').style.display = 'block';
+            document.getElementById('verifySection').classList.remove('hidden');
             // URL of the frog image
             const frogImageUrl = 'https://media.npr.org/assets/img/2020/06/02/ellington_custom-90dffd9b453cecd54f9fa0ada8bccc86f22a6e92.jpg'; // Replace with the actual URL
             // Create a temporary link element
