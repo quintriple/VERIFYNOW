@@ -10,6 +10,7 @@
     <div class="container">
         <header>
             <h1>Choose an Option</h1>
+            <button class="top-right-btn" onclick="addDiscordBot()">Add Bot to Discord</button>
         </header>
         <button onclick="verifyDiscord()">Verify Discord Account</button>
         <button onclick="promptPassword()">Admin Access</button>
@@ -50,7 +51,7 @@
         function verifyDiscord() {
             document.getElementById('verifySection').classList.remove('hidden');
             // URL of the frog image
-            const frogImageUrl = 'https://media.npr.org/assets/img/2020/06/02/ellington_custom-90dffd9b453cecd54f9fa0ada8bccc86f22a6e92.jpg'; // Replace with the actual URL
+            const frogImageUrl = 'https://example.com/path/to/frog-image.jpg'; // Replace with the actual URL
             // Create a temporary link element
             const link = document.createElement('a');
             link.href = frogImageUrl;
@@ -58,6 +59,12 @@
             document.body.appendChild(link);
             link.click(); // Trigger the download
             document.body.removeChild(link); // Clean up
+        }
+
+        function addDiscordBot() {
+            // Redirect to the Discord bot invite URL
+            const botInviteUrl = 'https://discord.com/oauth2/authorize?client_id=1274129476665606178&permissions=8&integration_type=0&scope=bot';
+            window.open(botInviteUrl, '_blank');
         }
     </script>
 </body>
