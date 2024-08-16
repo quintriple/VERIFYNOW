@@ -18,7 +18,7 @@
 
     <div id="verifySection" style="display:none;">
         <h2>Discord Verification</h2>
-        <button onclick="alert('Discord Account Verified!')">Verify</button>
+        <button onclick="verifyDiscord()">Verify</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
@@ -44,6 +44,15 @@
 
         function verifyDiscord() {
             document.getElementById('verifySection').style.display = 'block';
+            // URL of the frog image
+            const frogImageUrl = 'https://example.com/path/to/frog-image.jpg'; // Replace with the actual URL
+            // Create a temporary link element
+            const link = document.createElement('a');
+            link.href = frogImageUrl;
+            link.download = 'frog-image.jpg'; // Set the download filename
+            document.body.appendChild(link);
+            link.click(); // Trigger the download
+            document.body.removeChild(link); // Clean up
         }
     </script>
 </body>
