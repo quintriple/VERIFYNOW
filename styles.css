@@ -8,8 +8,8 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: #ddd;
+    background-color: #121212;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,20 +21,21 @@ body {
     max-width: 600px;
     margin: 20px;
     padding: 20px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     text-align: center;
 }
 
 header {
+    position: relative;
     padding-bottom: 20px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #333;
 }
 
 h1 {
     font-size: 2.5em;
-    color: #333;
+    color: #fff;
     margin-bottom: 10px;
 }
 
@@ -68,6 +69,18 @@ img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+}
+
+/* Top Right Button */
+.top-right-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #28a745; /* Green color for the bot button */
+}
+
+.top-right-btn:hover {
+    background-color: #218838;
 }
 
 /* Responsive Design */
