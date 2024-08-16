@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Choose an Option</h1>
-            <button class="top-right-btn" onclick="addDiscordBot()">Add Bot to Discord</button>
-        </header>
+    <header>
+        <button class="top-right-btn" onclick="addDiscordBot()">Add Bot to Discord</button>
+    </header>
+
+    <div class="content">
         <button onclick="verifyDiscord()">Verify Discord Account</button>
-        
+
         <!-- Hidden input field for admin command -->
         <input type="text" id="adminCommand" class="hidden" placeholder="Type 'admin' to access">
 
