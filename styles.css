@@ -12,36 +12,19 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #fff; /* Light text color for contrast */
-    background: linear-gradient(135deg, #1f1f1f, #2e2e2e); /* Dark gradient background */
+    background-color: #808080; /* Background color */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0; /* Ensure no extra margin around the body */
-}
-
-.container {
-    width: 100%;
-    max-width: 600px;
-    margin: 20px;
-    padding: 20px;
-    background: #1a1a1a; /* Slightly lighter background for the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Darker shadow for more depth */
-    border-radius: 10px; /* Slightly more rounded corners */
-    text-align: center;
-    position: relative; /* Make container relative to position the button correctly */
+    position: relative; /* Relative positioning for absolute elements */
 }
 
 header {
-    position: relative; /* Ensure header is positioned relative for button alignment */
-    padding-bottom: 20px;
-    border-bottom: 2px solid #333;
-}
-
-h1 {
-    font-size: 2.5em;
-    color: #fff;
-    margin-bottom: 20px;
+    position: absolute;
+    top: 10px; /* Distance from the top of the viewport */
+    right: 10px; /* Distance from the right of the viewport */
 }
 
 button {
@@ -77,18 +60,20 @@ img {
     border-radius: 8px;
 }
 
-/* Top Right Button */
-.top-right-btn {
-    position: absolute;
-    top: 10px; /* Distance from the top of the container */
-    right: 10px; /* Distance from the right of the container */
-    background-color: #28a745; /* Green color for the bot button */
-    padding: 12px 24px; /* Adjust padding for better visibility */
+/* Center content */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    height: 100vh; /* Full viewport height */
 }
 
-.top-right-btn:hover {
-    background-color: #218838;
-    transform: scale(1.05); /* Slightly scale button on hover */
+.top-right-btn {
+    background-color: #28a745; /* Green color for the bot button */
+    padding: 12px 24px; /* Adjust padding for better visibility */
 }
 
 /* Hidden input field */
@@ -103,14 +88,6 @@ img {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
     button {
         padding: 10px 20px;
         font-size: 0.9em;
